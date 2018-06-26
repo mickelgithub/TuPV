@@ -18,7 +18,9 @@ class SplashActivity : AppCompatActivity() {
 
     fun postDelay(delay: Long) {
         val handler= Handler()
-        handler.postDelayed({}, delay)
-        Toast.makeText(this, "Holaaaaa", Toast.LENGTH_LONG)
+        handler.postDelayed({
+            Toast.makeText(this, "Holaaaaa", Toast.LENGTH_LONG).show()
+        }, delay)
+
     }
 }
