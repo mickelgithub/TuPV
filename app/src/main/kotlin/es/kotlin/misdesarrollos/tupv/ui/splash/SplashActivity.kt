@@ -1,4 +1,4 @@
-package es.kotlin.misdesarrollos.tupv
+package es.kotlin.misdesarrollos.tupv.ui.splash
 
 import android.os.Bundle
 import android.os.Handler

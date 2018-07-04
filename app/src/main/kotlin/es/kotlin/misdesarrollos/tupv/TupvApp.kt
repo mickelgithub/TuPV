@@ -5,6 +5,7 @@ import android.app.Application
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
+import es.kotlin.misdesarrollos.tupv.di.component.DaggerAppComponent
 import javax.inject.Inject
 
 class TupvApp: Application(), HasActivityInjector {
@@ -18,6 +19,9 @@ class TupvApp: Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
+
+        DaggerAppComponent.builder()
+
 
     }
 }
