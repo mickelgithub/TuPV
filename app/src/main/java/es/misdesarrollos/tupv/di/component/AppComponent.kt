@@ -1,11 +1,11 @@
-package es.kotlin.misdesarrollos.tupv.di.component
+package es.misdesarrollos.tupv.di.component
 
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
-import es.kotlin.misdesarrollos.tupv.App
-import es.kotlin.misdesarrollos.tupv.di.builder.ActivityBuilder
-import es.kotlin.misdesarrollos.tupv.di.module.AppModule
+import es.misdesarrollos.tupv.App
+import es.misdesarrollos.tupv.di.builder.ActivityBuilder
+import es.misdesarrollos.tupv.di.module.AppModule
 import es.misdesarrollos.tupv.di.module.FirebaseModule
 import javax.inject.Singleton
 

@@ -1,4 +1,4 @@
-package es.kotlin.misdesarrollos.tupv.ui.splash
+package es.misdesarrollos.tupv.ui.splash
 
 import dagger.Module
 

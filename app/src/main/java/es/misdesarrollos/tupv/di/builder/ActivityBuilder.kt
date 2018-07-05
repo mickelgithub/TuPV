@@ -1,9 +1,9 @@
-package es.kotlin.misdesarrollos.tupv.di.builder
+package es.misdesarrollos.tupv.di.builder
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import es.kotlin.misdesarrollos.tupv.ui.splash.SplashActivity
-import es.kotlin.misdesarrollos.tupv.ui.splash.SplashActivityModule
+import es.misdesarrollos.tupv.ui.splash.SplashActivity
+import es.misdesarrollos.tupv.ui.splash.SplashActivityModule
 
 
 @Module

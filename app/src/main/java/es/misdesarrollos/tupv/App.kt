@@ -1,4 +1,4 @@
-package es.kotlin.misdesarrollos.tupv
+package es.misdesarrollos.tupv
 
 import android.app.Activity
 import android.app.Application
@@ -7,11 +7,12 @@ import com.google.firebase.database.FirebaseDatabase
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
-import es.kotlin.misdesarrollos.tupv.di.component.AppComponent
-import es.kotlin.misdesarrollos.tupv.di.component.DaggerAppComponent
+import es.misdesarrollos.tupv.di.component.AppComponent
+import es.misdesarrollos.tupv.di.component.DaggerAppComponent
 import javax.inject.Inject
 
 class App: Application(), HasActivityInjector {
+
 
     lateinit var appComponent: AppComponent
 

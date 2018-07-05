@@ -9,7 +9,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "es.kotlin.misdesarrollos.tupv"
+        applicationId "es.misdesarrollos.tupv"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -24,9 +24,9 @@ android {
     }
 
 
-    sourceSets {
+    /*sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
-    }
+    }*/
 }
 
 dependencies {
@@ -38,10 +38,12 @@ dependencies {
     implementation "com.google.firebase:firebase-auth:$firebaseauthVersion"
     implementation "com.google.firebase:firebase-database:$firebasedatabaseVersion"
 
-    /*implementation "com.google.dagger:dagger:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"*/
+    implementation "android.arch.lifecycle:runtime:$lifecycleVersion"
+    implementation "android.arch.lifecycle:extensions:$lifecycleVersion"
+    kapt "android.arch.lifecycle:compiler:$lifecycleVersion"
+    //implementation "android.arch.persistence.room:runtime:$lifecycleVersion"
+    //kapt "android.arch.persistence.room:compiler:$lifecycleVersion"
+    //implementation "android.arch.persistence.room:rxjava2:$lifecycleVersion"
 
     provided "com.google.dagger:dagger:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
@@ -52,30 +54,12 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
-
-    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxjava2Version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    // ViewModel and LiveData
-    implementation "android.arch.lifecycle:extensions:$lifecycleVersion"
-    // alternatively - just ViewModel
-    implementation "android.arch.lifecycle:viewmodel-ktx:$lifecycleVersion" // use -ktx for Kotlin
-    // alternatively - just LiveData
-    implementation "android.arch.lifecycle:livedata:$lifecycleVersion"
-    // alternatively - Lifecycles only (no ViewModel or LiveData).
-    //     Support library depends on this lightweight import
-    implementation "android.arch.lifecycle:runtime:$lifecycleVersion"
-
-    annotationProcessor "android.arch.lifecycle:compiler:$lifecycleVersion"
-    // alternately - if using Java8, use the following instead of compiler
-    implementation "android.arch.lifecycle:common-java8:lifecycleVersion"
-
-    // optional - ReactiveStreams support for LiveData
-    implementation "android.arch.lifecycle:reactivestreams:lifecycleVersion"
 }
 
 apply plugin: 'com.google.gms.google-services'

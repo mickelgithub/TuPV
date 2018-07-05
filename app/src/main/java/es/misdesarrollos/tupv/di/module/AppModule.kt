@@ -1,8 +1,8 @@
-package es.kotlin.misdesarrollos.tupv.di.module
+package es.misdesarrollos.tupv.di.module
 
 import dagger.Module
 import dagger.Provides
-import es.kotlin.misdesarrollos.tupv.App
+import es.misdesarrollos.tupv.App
 import javax.inject.Singleton
 
 @Module
