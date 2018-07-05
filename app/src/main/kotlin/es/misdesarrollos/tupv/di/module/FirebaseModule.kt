@@ -1,4 +1,4 @@
-package es.kotlin.misdesarrollos.tupv.di.module
+package es.misdesarrollos.tupv.di.module
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -7,7 +7,7 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AppModule {
+class FirebaseModule {
 
     @Provides
     @Singleton
@@ -16,6 +16,5 @@ class AppModule {
     @Provides
     @Singleton
     fun provideFirebaseDatabase()= FirebaseDatabase.getInstance()
-
 
 }
